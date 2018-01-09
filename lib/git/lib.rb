@@ -737,6 +737,7 @@ module Git
 
       arr_opts = []
       arr_opts << '--force'  if opts[:force] || opts[:f]
+      arr_opts << '-d' if opts[:delete]
       arr_opts << remote
 
       command('push', arr_opts + [branch])
